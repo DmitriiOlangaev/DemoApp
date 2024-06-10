@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.SearchStateDestinationsChosenFragment">
+
+    <Button
+        android:id="@+id/reverseTicketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reverseTicketTitle"
+        app:layout_constraintEnd_toStartOf="@+id/chooseDateButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/chooseDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/choosePassengersButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/reverseTicketButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/choosePassengersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choosePassengersTitle"
+        app:layout_constraintEnd_toStartOf="@+id/filterTicketsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chooseDateButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/filterTicketsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/choosePassengersButton"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Button>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ticketsOffersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/reverseTicketButton">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/openAllTicketsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/openAllTicketsTitle"
+        app:layout_constraintTop_toBottomOf="@id/ticketsOffersRecyclerView">
+
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

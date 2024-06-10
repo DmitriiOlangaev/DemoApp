@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/air_tickets_nav_graph"
+    app:startDestination="@id/choosingRouteFragment">
+
+
+    <fragment
+        android:id="@+id/choosingRouteFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingRouteFragment"
+        android:label="fragment_choosing_route"
+        tools:layout="@layout/fragment_choosing_route">
+        <action
+            android:id="@+id/action_choosingRouteFragment_to_mockFragment"
+            app:destination="@id/mockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mockFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.MockFragment"
+        android:label="MockFragment" />
+</navigation>

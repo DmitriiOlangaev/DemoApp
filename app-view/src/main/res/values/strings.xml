@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="air_tickets_menu_title">Авиабилеты</string>
+    <string name="hotels_menu_title">Отели</string>
+    <string name="shortly_menu_title">Короче</string>
+    <string name="subscriptions_menu_title">Подписки</string>
+    <string name="profile_menu_title">Профиль</string>
+</resources>

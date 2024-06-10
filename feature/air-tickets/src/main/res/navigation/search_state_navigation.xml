@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_state_navigation"
+    app:startDestination="@id/searchStateInitFragment">
+
+    <fragment
+        android:id="@+id/searchStateInitFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.SearchStateInitFragment"
+        android:label="fragment_search_state_init"
+        tools:layout="@layout/fragment_search_state_init" />
+    <fragment
+        android:id="@+id/searchStateChoosingToFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.SearchStateChoosingToFragment"
+        android:label="fragment_search_state_choosing_to"
+        tools:layout="@layout/fragment_search_state_choosing_to" />
+    <fragment
+        android:id="@+id/searchStateDestinationsChosenFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.SearchStateDestinationsChosenFragment"
+        android:label="fragment_search_state_destinations_chosen"
+        tools:layout="@layout/fragment_search_state_destinations_chosen">
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <argument
+            android:name="to"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_searchStateDestinationsChosenFragment"
+        app:destination="@id/searchStateDestinationsChosenFragment"
+        app:launchSingleTop="true">
+        <argument android:name="from" />
+        <argument android:name="to" />
+
+    </action>
+</navigation>

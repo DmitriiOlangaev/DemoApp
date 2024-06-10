@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetDropDown">
+    <value>
+      <entry key="app-view">
+        <State />
+      </entry>
+      <entry key="core.common-android">
+        <State />
+      </entry>
+      <entry key="feature.air-tickets">
+        <State />
+      </entry>
+      <entry key="feature.mock">
+        <State />
+      </entry>
+      <entry key="feature.mock-feature">
+        <State />
+      </entry>
+    </value>
+  </component>
+</project>
