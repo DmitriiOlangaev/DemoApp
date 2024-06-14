@@ -14,9 +14,24 @@
         <action
             android:id="@+id/action_choosingRouteFragment_to_mockFragment"
             app:destination="@id/mockFragment" />
+        <action
+            android:id="@+id/action_choosingRouteFragment_to_choosingTicketFragment"
+            app:destination="@id/choosingTicketFragment" />
     </fragment>
     <fragment
         android:id="@+id/mockFragment"
         android:name="com.demo.demoapp.feature.airTickets.ui.fragments.MockFragment"
         android:label="MockFragment" />
+    <fragment
+        android:id="@+id/choosingTicketFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingTicketFragment"
+        android:label="fragment_choosing_ticket"
+        tools:layout="@layout/fragment_choosing_ticket" >
+        <argument
+            android:name="ticketData"
+            app:argType="com.demo.demoapp.feature.airTickets.ui.fragments.TicketData" />
+    </fragment>
+    <argument
+        android:name="ticketData"
+        app:argType="com.demo.demoapp.feature.airTickets.ui.fragments.TicketData" />
 </navigation>

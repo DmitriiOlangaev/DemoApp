@@ -13,7 +13,9 @@ data class Ticket(
     val company: String,
     val departure: DepartureArrival,
     val arrival: DepartureArrival,
+    @SerialName("has_transfer")
     val hasTransfer: Boolean,
+    @SerialName("has_visa_transfer")
     val hasVisaTransfer: Boolean,
     val luggage: Luggage,
     @SerialName("hand_luggage")

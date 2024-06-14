@@ -10,3 +10,6 @@ annotation class ToDestinationsSuggestionsRecyclerView
 
 @Qualifier
 annotation class TicketSOffersRecyclerView
+
+@Qualifier
+annotation class TicketsRecyclerView

@@ -48,7 +48,7 @@ internal class SearchStateDestinationsChosenFragment : Fragment() {
         searchStateDestinationsChosenFragmentComponent.inject(this)
         viewController =
             searchStateDestinationsChosenFragmentComponent.searchStateDestinationsChosenFragmentViewController()
-                .create(this, binding, viewModel)
+                .create(this, args, binding, viewModel)
         viewController.onCreate()
     }
 
