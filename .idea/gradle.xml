@@ -29,6 +29,7 @@
             <option value="$PROJECT_DIR$/core/common-android" />
             <option value="$PROJECT_DIR$/core/datasources" />
             <option value="$PROJECT_DIR$/core/datastore-proto" />
+            <option value="$PROJECT_DIR$/core/designsystem" />
             <option value="$PROJECT_DIR$/core/model" />
             <option value="$PROJECT_DIR$/core/repositories" />
             <option value="$PROJECT_DIR$/feature" />
