@@ -7,62 +7,45 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.demo.demoapp.core.common.di.findDependencies
 import com.demo.demoapp.core.common.di.lazyViewModel
-import com.demo.demoapp.feature.airTickets.databinding.FragmentChoosingRouteBinding
-import com.demo.demoapp.feature.airTickets.di.ChoosingRouteFragmentComponent
-import com.demo.demoapp.feature.airTickets.di.DaggerChoosingRouteFragmentComponent
-import com.demo.demoapp.feature.airTickets.ui.viewControllers.ChoosingRouteFragmentViewController
-import com.demo.demoapp.feature.airTickets.viewModels.ChoosingRouteFragmentViewModel
-import com.demo.demoapp.feature.airTickets.viewModels.ToDestinationSharedViewModel
+import com.demo.demoapp.feature.airTickets.databinding.FragmentEnterBinding
+import com.demo.demoapp.feature.airTickets.di.EnterFragmentComponent
+import com.demo.demoapp.feature.airTickets.di.DaggerEnterFragmentComponent
 
 internal class EnterFragment : Fragment() {
-    private var _binding: FragmentChoosingRouteBinding? = null
-    private val binding: FragmentChoosingRouteBinding
+    private var _binding: FragmentEnterBinding? = null
+    private val binding: FragmentEnterBinding
         get() = _binding!!
 
 
-    internal val choosingRouteFragmentComponent: ChoosingRouteFragmentComponent by lazy {
+    private val enterFragmentComponent: EnterFragmentComponent by lazy {
         initializeComponent()
     }
-    private val viewModel by lazyViewModel<ChoosingRouteFragmentViewModel> { stateHandle ->
-        choosingRouteFragmentComponent.choosingRouteFragmentViewModel().create(stateHandle)
-    }
-    private val sharedViewModel by lazyViewModel<ToDestinationSharedViewModel> { stateHandle ->
-        choosingRouteFragmentComponent.toDestinationSharedViewModel()
-            .create(stateHandle)
-    }
+//    private val viewModel by lazyViewModel<EnterFragmentViewModel> { stateHandle ->
+//        enterFragmentComponent.viewModel().create(stateHandle)
+//    }
 
-    private fun initializeComponent(): ChoosingRouteFragmentComponent =
-        DaggerChoosingRouteFragmentComponent.factory()
+    private fun initializeComponent(): EnterFragmentComponent =
+        DaggerEnterFragmentComponent.factory()
             .create(this, requireActivity(), findDependencies())
 
-    private lateinit var viewController: ChoosingRouteFragmentViewController
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentChoosingRouteBinding.inflate(inflater, container, false)
+        _binding = FragmentEnterBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        choosingRouteFragmentComponent.inject(this)
-        viewController = choosingRouteFragmentComponent.choosingRouteFragmentViewController()
-            .create(this, binding, viewModel, sharedViewModel)
-        viewController.onCreate()
-    }
-
-    override fun onStart() {
-        super.onStart()
-        viewController.onStart()
+        enterFragmentComponent.inject(this)
     }
 
 
     override fun onDestroyView() {
         _binding = null
-        viewController.onDestroy()
         super.onDestroyView()
     }
 }
