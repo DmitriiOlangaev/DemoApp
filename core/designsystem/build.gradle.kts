@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.demo.demoapp.designsystem"
 }
+
+dependencies {
+    implementation(libs.androidx.appcompat)
+}

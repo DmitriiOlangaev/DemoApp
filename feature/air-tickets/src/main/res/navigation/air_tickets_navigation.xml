@@ -8,9 +8,9 @@
 
     <fragment
         android:id="@+id/choosingRouteFragment"
-        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingRouteFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.EnterFragment"
         android:label="fragment_choosing_route"
-        tools:layout="@layout/fragment_choosing_route">
+        tools:layout="@layout/fragment_enter">
         <action
             android:id="@+id/action_choosingRouteFragment_to_mockFragment"
             app:destination="@id/mockFragment" />

@@ -24,7 +24,7 @@ internal class SearchStateChoosingToFragment : Fragment() {
     }
 
     private fun initializeComponent(): SearchStateChoosingToFragmentComponent =
-        (requireParentFragment().requireParentFragment() as ChoosingRouteFragment).choosingRouteFragmentComponent.searchStateChoosingToFragmentComponentFactory()
+        (requireParentFragment().requireParentFragment() as EnterFragment).choosingRouteFragmentComponent.searchStateChoosingToFragmentComponentFactory()
             .create(this)
 
     private val viewModel by lazyViewModel<SearchStateChoosingToFragmentViewModel> { stateHandle ->

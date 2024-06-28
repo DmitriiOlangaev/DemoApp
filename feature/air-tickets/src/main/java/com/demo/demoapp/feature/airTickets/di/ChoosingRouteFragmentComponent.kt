@@ -3,7 +3,7 @@ package com.demo.demoapp.feature.airTickets.di
 import android.content.Context
 import android.widget.ArrayAdapter
 import com.demo.demoapp.core.common.di.FragmentScope
-import com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingRouteFragment
+import com.demo.demoapp.feature.airTickets.ui.fragments.EnterFragment
 import com.demo.demoapp.feature.airTickets.ui.viewControllers.ChoosingRouteFragmentViewController
 import com.demo.demoapp.feature.airTickets.viewModels.ChoosingRouteFragmentViewModel
 import com.demo.demoapp.feature.airTickets.viewModels.ToDestinationSharedViewModel
@@ -25,7 +25,7 @@ internal interface ChoosingRouteFragmentComponent {
     @Component.Factory
     interface Factory {
         fun create(
-            @BindsInstance choosingRouteFragment: ChoosingRouteFragment,
+            @BindsInstance choosingRouteFragment: EnterFragment,
             @BindsInstance context: Context,
             deps: AirTicketsDeps
         ): ChoosingRouteFragmentComponent
@@ -43,7 +43,7 @@ internal interface ChoosingRouteFragmentComponent {
 
     fun toDestinationSharedViewModel(): ToDestinationSharedViewModel.Factory
 
-    fun inject(choosingRouteFragment: ChoosingRouteFragment)
+    fun inject(choosingRouteFragment: EnterFragment)
 }
 
 @Module

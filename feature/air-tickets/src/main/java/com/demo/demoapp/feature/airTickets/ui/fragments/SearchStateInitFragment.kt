@@ -20,7 +20,7 @@ internal class SearchStateInitFragment : Fragment() {
     }
 
     private fun initializeComponent(): SearchStateInitFragmentComponent =
-        (requireParentFragment().parentFragment as ChoosingRouteFragment).choosingRouteFragmentComponent.searchStateInitFragmentComponentFactory()
+        (requireParentFragment().parentFragment as EnterFragment).choosingRouteFragmentComponent.searchStateInitFragmentComponentFactory()
             .create(this)
 
     private val viewModel by lazyViewModel<SearchStateInitFragmentViewModel> { stateHandle ->

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.actvDest">
+        <item name="android:lines">1</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.title2</item>
+        <item name="android:background">@color/Grey2</item>
+        <item name="hintTextAppearance">@style/TextAppearance.AppCompat.button1</item>
+    </style>
+</resources>

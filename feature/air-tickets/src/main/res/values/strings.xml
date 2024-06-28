@@ -1,15 +1,15 @@
 <resources>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_mock_fragment">Hello blank fragment</string>
     <string name="concerts_text_view_title">Музыкально отлететь</string>
     <string name="hard_route_title">Сложный\nмаршрут</string>
     <string name="wherever_title">Куда угодно</string>
     <string name="holidays_title">Выходные</string>
     <string name="hot_tickets_title">Горячие\nбилеты</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="reverseTicketTitle">обратно</string>
     <string name="choosePassengersTitle">1, эконом</string>
     <string name="openAllTicketsTitle">Посмотреть все билеты</string>
+    <string name="enterFragment_intro">"Поиск дешевых\n   авиабилетов"</string>
+    <string name="enterFragment_rvConcerts_title">Музыкально отлететь</string>
 </resources>

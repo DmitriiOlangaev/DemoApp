@@ -11,7 +11,7 @@ import com.demo.demoapp.core.common.di.setCollector
 import com.demo.demoapp.feature.airTickets.R
 import com.demo.demoapp.feature.airTickets.SearchStateNavigationDirections
 import com.demo.demoapp.feature.airTickets.databinding.FragmentChoosingRouteBinding
-import com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingRouteFragment
+import com.demo.demoapp.feature.airTickets.ui.fragments.EnterFragment
 import com.demo.demoapp.feature.airTickets.viewModels.ChoosingRouteFragmentViewModel
 import com.demo.demoapp.feature.airTickets.viewModels.ToDestinationSharedViewModel
 import dagger.assisted.Assisted
@@ -20,13 +20,13 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.Job
 
 internal class ChoosingRouteFragmentViewController @AssistedInject constructor(
-    @Assisted fragment: ChoosingRouteFragment,
+    @Assisted fragment: EnterFragment,
     @Assisted private val binding: FragmentChoosingRouteBinding,
     @Assisted private val viewModel: ChoosingRouteFragmentViewModel,
     @Assisted private val sharedViewModel: ToDestinationSharedViewModel,
     private val adapter: ArrayAdapter<String>
 ) :
-    FragmentViewController<ChoosingRouteFragment>(fragment) {
+    FragmentViewController<EnterFragment>(fragment) {
 
     private val navHostFragment
         get() = fragment.childFragmentManager.findFragmentById(R.id.searchStateNavHostFragment) as NavHostFragment
@@ -153,7 +153,7 @@ internal class ChoosingRouteFragmentViewController @AssistedInject constructor(
     @AssistedFactory
     internal interface Factory {
         fun create(
-            choosingRouteFragment: ChoosingRouteFragment,
+            choosingRouteFragment: EnterFragment,
             binding: FragmentChoosingRouteBinding,
             viewModel: ChoosingRouteFragmentViewModel,
             sharedViewModel: ToDestinationSharedViewModel

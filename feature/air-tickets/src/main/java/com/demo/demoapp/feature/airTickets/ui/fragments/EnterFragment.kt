@@ -14,7 +14,7 @@ import com.demo.demoapp.feature.airTickets.ui.viewControllers.ChoosingRouteFragm
 import com.demo.demoapp.feature.airTickets.viewModels.ChoosingRouteFragmentViewModel
 import com.demo.demoapp.feature.airTickets.viewModels.ToDestinationSharedViewModel
 
-internal class ChoosingRouteFragment : Fragment() {
+internal class EnterFragment : Fragment() {
     private var _binding: FragmentChoosingRouteBinding? = null
     private val binding: FragmentChoosingRouteBinding
         get() = _binding!!

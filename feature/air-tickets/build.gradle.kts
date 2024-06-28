@@ -20,6 +20,7 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:common-android"))
     implementation(project(":core:repositories"))
+    implementation(project(":core:designsystem"))
     implementation(libs.adapterdelegates4.kotlin.dsl)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
