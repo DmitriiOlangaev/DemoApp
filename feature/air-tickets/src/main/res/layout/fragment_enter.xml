@@ -24,22 +24,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clForActvs"
         android:layout_width="match_parent"
-        android:layout_height="122dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/actvFrom_margin_top"
         android:background="@drawable/shape_enter_fragment_destinations_container"
         android:orientation="vertical"
-        android:padding="16.5dp"
+        android:padding="18dp"
         app:layout_constraintTop_toBottomOf="@id/tvIntro">
 
 
         <View
             android:id="@+id/vActvSepLine"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/Grey5"
-            android:layout_marginStart="25dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivLens"
             app:layout_constraintEnd_toEndOf="parent">
 
         </View>
@@ -55,35 +55,35 @@
 
         </View>
 
-        <TextView
+
+        <EditText
             android:id="@+id/btnFrom"
+            style="@style/EtvDest"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@id/vActvSepLine"
-            android:text="Откуда - Москва"
-            android:gravity="start|center_vertical"
-            android:textAppearance="@style/TextAppearance.AppCompat.button1"
-            android:background="@drawable/shape_enter_fragment_destination_from"
-            android:paddingStart="25dp">
+            android:hint="Откуда - Москва"
+            android:background="@drawable/shape_enter_fragment_destination_from">
 
-        </TextView>
+        </EditText>
 
-        <TextView
+        <EditText
             android:id="@+id/btnTo"
+            style="@style/EtvDest"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Куда - Турция"
             android:background="@drawable/shape_enter_fragment_destination_to"
-            app:layout_constraintTop_toBottomOf="@id/vActvSepLine"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/vActvSepLine">
 
-        </TextView>
+        </EditText>
 
         <ImageView
             android:id="@+id/ivLens"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/search"
+            android:paddingStart="6dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent">

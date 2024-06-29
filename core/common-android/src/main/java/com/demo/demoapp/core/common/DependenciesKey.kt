@@ -1,4 +1,4 @@
-package com.demo.demoapp.core.common.di
+package com.demo.demoapp.core.common
 
 import dagger.MapKey
 import kotlin.reflect.KClass

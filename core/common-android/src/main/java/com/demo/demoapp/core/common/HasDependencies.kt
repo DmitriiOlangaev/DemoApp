@@ -1,4 +1,4 @@
-package com.demo.demoapp.core.common.di
+package com.demo.demoapp.core.common
 
 typealias DepsMap = Map<Class<out Dependencies>, Dependencies>
 

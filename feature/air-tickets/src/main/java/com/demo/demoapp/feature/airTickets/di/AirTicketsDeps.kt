@@ -1,6 +1,6 @@
 package com.demo.demoapp.feature.airTickets.di
 
-import com.demo.demoapp.core.common.di.Dependencies
+import com.demo.demoapp.core.common.Dependencies
 import com.demo.demoapp.core.repositories.interfaces.ConcertsRepository
 import com.demo.demoapp.core.repositories.interfaces.ImagesRepository
 import com.demo.demoapp.core.repositories.interfaces.TicketsOffersRepository

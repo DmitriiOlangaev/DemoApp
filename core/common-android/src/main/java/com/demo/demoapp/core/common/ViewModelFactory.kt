@@ -1,4 +1,4 @@
-package com.demo.demoapp.core.common.di
+package com.demo.demoapp.core.common
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels

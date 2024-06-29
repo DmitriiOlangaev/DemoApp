@@ -2,7 +2,7 @@ package com.demo.demoapp.feature.airTickets.ui
 
 import android.widget.ImageView
 import android.widget.ProgressBar
-import com.demo.demoapp.core.common.di.setVisible
+import com.demo.demoapp.core.common.setVisible
 import com.demo.demoapp.core.repositories.interfaces.ImagesRepository
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory

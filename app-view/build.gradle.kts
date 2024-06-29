@@ -24,6 +24,7 @@ dependencies {
     implementation(project(":core:datasources"))
     implementation(project(":core:datastore-proto"))
     implementation(project(":core:repositories"))
+    implementation(project(":core:network"))
     implementation(project(":feature:mock"))
     implementation(project(":feature:air-tickets"))
     testImplementation(libs.junit)

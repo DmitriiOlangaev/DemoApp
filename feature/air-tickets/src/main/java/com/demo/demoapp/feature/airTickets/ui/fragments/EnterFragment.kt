@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.demo.demoapp.core.common.di.findDependencies
-import com.demo.demoapp.core.common.di.lazyViewModel
+import com.demo.demoapp.core.common.findDependencies
 import com.demo.demoapp.feature.airTickets.databinding.FragmentEnterBinding
 import com.demo.demoapp.feature.airTickets.di.EnterFragmentComponent
 import com.demo.demoapp.feature.airTickets.di.DaggerEnterFragmentComponent
@@ -41,6 +41,9 @@ internal class EnterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         enterFragmentComponent.inject(this)
+        binding.btnFrom.setOnClickListener {
+            Toast.makeText(requireContext(), "hui", Toast.LENGTH_SHORT).show()
+        }
     }
 
 

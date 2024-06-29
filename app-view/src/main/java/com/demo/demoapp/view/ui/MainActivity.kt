@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.demo.demoapp.core.common.di.DepsMap
-import com.demo.demoapp.core.common.di.HasDependencies
+import com.demo.demoapp.core.common.DepsMap
+import com.demo.demoapp.core.common.HasDependencies
 import com.demo.demoapp.view.DemoApp
 import com.demo.demoapp.view.R
 import com.demo.demoapp.view.databinding.ActivityMainBinding

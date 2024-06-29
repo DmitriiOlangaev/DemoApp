@@ -1,7 +1,7 @@
 package com.demo.demoapp.view.di
 
-import com.demo.demoapp.core.common.di.Dependencies
-import com.demo.demoapp.core.common.di.DependenciesKey
+import com.demo.demoapp.core.common.Dependencies
+import com.demo.demoapp.core.common.DependenciesKey
 import com.demo.demoapp.feature.airTickets.di.AirTicketsDeps
 import dagger.Binds
 import dagger.Module
