@@ -30,6 +30,7 @@ lifecycleKtx = "2.8.2"
 protobuf = "3.25.2"
 protobufPlugin = "0.9.4"
 androidxDataStore = "1.1.1"
+shimmer = "0.5.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -78,9 +79,11 @@ androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifec
 protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version.ref = "protobuf" }
 protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref = "protobuf" }
 androidx-dataStore-core = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
+facebook-shimmer = { group = "com.facebook.shimmer", name = "shimmer", version.ref = "shimmer" }
+
 
 [bundles]
-view = ["androidx-core-ktx", "androidx-lifecycle-runtime-ktx", "androidx-lifecycle-viewmodel-ktx", "androidx-constraintlayout", "material", "androidx-appcompat"]
+view = ["androidx-core-ktx", "androidx-lifecycle-runtime-ktx", "androidx-lifecycle-viewmodel-ktx", "androidx-constraintlayout", "material", "androidx-appcompat", "facebook-shimmer"]
 view-navigation = ["androidx-navigation-ui-ktx", "androidx-navigation-fragment-ktx"]
 
 [plugins]

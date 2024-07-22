@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="concert_image_size">125dp</dimen>
+    <dimen name="enterFragment_titleTopMargin">60dp</dimen>
+    <dimen name="actvFrom_margin_top">36dp</dimen>
+    <dimen name="enterFragment_horizontalPadding">15.5dp</dimen>
+    <dimen name="concert_item_spacing">7dp</dimen>
+    <dimen name="corner_radius">16dp</dimen>
+</resources>

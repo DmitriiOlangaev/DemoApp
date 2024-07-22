@@ -24,7 +24,7 @@ internal class MainActivity : AppCompatActivity(), HasDependencies {
     }
 
     private fun initializeMainActivityComponent(): MainActivityComponent =
-        (application as DemoApp).applicationComponent.mainActivityComponentFactory()
+        (application as DemoApp).applicationComponent.getMainActivityComponentFactory()
             .create(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,7 @@ internal class MainActivity : AppCompatActivity(), HasDependencies {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         navController =
-            (supportFragmentManager.findFragmentById(R.id.mainNavHostFragment) as NavHostFragment).navController
-        binding.bottomNavView.setupWithNavController(navController)
+            (supportFragmentManager.findFragmentById(R.id.fcv_main) as NavHostFragment).navController
+        binding.bnvMain.setupWithNavController(navController)
     }
 }

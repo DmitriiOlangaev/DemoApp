@@ -9,6 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import kotlin.Result
+import kotlin.coroutines.cancellation.CancellationException
 
 inline fun <reified D : Dependencies> Fragment.findDependencies(): D {
     return findDependenciesByClass(D::class.java)
@@ -57,6 +59,14 @@ private val Fragment.allParents: Iterable<Any>
         }
     }
 
+suspend fun <T> suspendRunCatching(block: suspend () -> T): Result<T> = try {
+    Result.success(block())
+} catch (cancellationException: CancellationException) {
+    throw cancellationException
+} catch (exception: Exception) {
+    Result.failure(exception)
+}
+
 fun View.setVisible(visible: Boolean) {
     this.visibility = if (visible) View.VISIBLE else View.INVISIBLE
 }
@@ -68,6 +78,6 @@ fun View.setVisibleOrGone(visible: Boolean) {
 
 fun Fragment.setCollector(f: suspend CoroutineScope.() -> Unit) {
     viewLifecycleOwner.lifecycleScope.launch {
-        repeatOnLifecycle(Lifecycle.State.STARTED, f)
+        viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED, f)
     }
 }

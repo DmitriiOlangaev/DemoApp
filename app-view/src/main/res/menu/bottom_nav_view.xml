@@ -3,31 +3,31 @@
     <item
         android:id="@+id/air_tickets_nav_graph"
         android:enabled="true"
-        android:icon="@drawable/air_tickets"
+        android:icon="@drawable/ic_air_tickets"
         android:title="@string/air_tickets_menu_title" />
 
     <item
         android:id="@+id/mock_nav_graph"
         android:enabled="true"
-        android:icon="@drawable/hotels"
+        android:icon="@drawable/ic_hotels"
         android:title="@string/hotels_menu_title" />
 
     <item
         android:id="@+id/shortly_nav_graph"
         android:enabled="true"
-        android:icon="@drawable/shortly"
+        android:icon="@drawable/ic_shortly"
         android:title="@string/shortly_menu_title" />
 
 
     <item
         android:id="@+id/subscriptions_nav_graph"
         android:enabled="true"
-        android:icon="@drawable/subscriptions"
+        android:icon="@drawable/ic_subscriptions"
         android:title="@string/subscriptions_menu_title" />
 
     <item
         android:id="@+id/profile_nav_graph"
         android:enabled="true"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/ic_profile"
         android:title="@string/profile_menu_title" />
 </menu>

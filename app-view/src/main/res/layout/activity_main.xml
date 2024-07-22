@@ -8,19 +8,19 @@
     tools:context=".ui.MainActivity">
 
     <fragment
-        android:id="@+id/mainNavHostFragment"
+        android:id="@+id/fcv_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:navGraph="@navigation/main"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/main_navigation">
+        app:layout_constraintBottom_toTopOf="@+id/bnv_main"
+        app:layout_constraintTop_toTopOf="parent">
 
     </fragment>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavView"
+        android:id="@+id/bnv_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:labelVisibilityMode="labeled"

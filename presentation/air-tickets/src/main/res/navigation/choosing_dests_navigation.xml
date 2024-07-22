@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_state_navigation"
+    app:startDestination="@id/choosingFromFragment">
+    <fragment
+        android:id="@+id/choosingToFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingToFragment"
+        android:label="fragment_choosing_to"
+        tools:layout="@layout/fragment_choosing_to" />
+    <fragment
+        android:id="@+id/choosingFromFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingFromFragment"
+        android:label="fragment_choosing_from"
+        tools:layout="@layout/fragment_choosing_from" />
+    <fragment
+        android:id="@+id/choosingTownFragment"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.ChoosingTownFragment"
+        android:label="fragment_choosing_town"
+        tools:layout="@layout/fragment_choosing_town" />
+    <action
+        android:id="@+id/action_global_choosingTownFragment2"
+        app:destination="@id/choosingTownFragment"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_choosingFromFragment"
+        app:destination="@id/choosingFromFragment"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_choosingToFragment"
+        app:destination="@id/choosingToFragment"
+        app:launchSingleTop="true" />
+</navigation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ThemeOverlay.AppCompat.dest">
+        <item name="android:lines">1</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.button1</item>
+        <item name="hintTextAppearance">@style/TextAppearance.AppCompat.button1</item>
+        <item name="hintTextColor">@color/Grey6</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:drawableTint">@color/White</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:textColorHighlight">@color/Grey6</item>
+    </style>
+    <style name="btn_dest" parent="Widget.AppCompat.Button">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.button1</item>
+        <item name="android:textColor">@color/Grey6</item>
+        <item name="android:paddingStart">28dp</item>
+        <item name="android:paddingVertical">5dp</item>
+    </style>
+
+    <style name="btn_modal" parent="Widget.AppCompat.ImageButton">
+        <item name="android:padding">18dp</item>
+        <item name="android:background">@drawable/shape_modal_buttons</item>
+    </style>
+</resources>

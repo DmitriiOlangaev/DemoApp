@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    app:startDestination="@id/air_tickets_nav_graph">
+
+    <fragment
+        android:id="@+id/air_tickets_nav_graph"
+        android:name="com.demo.demoapp.feature.airTickets.ui.fragments.AirTicketsNavHostFragment"
+        android:label="fragment_air_tickets"
+        />
+    <fragment
+        android:id="@+id/mock_nav_graph"
+        android:name="com.demo.demoapp.feature.mock.MockFragment"
+        android:label="fragment_mock"
+        />
+
+</navigation>

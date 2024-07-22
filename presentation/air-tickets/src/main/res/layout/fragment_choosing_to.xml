@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ChoosingToFragment">
+
+
+    <ImageButton
+        android:id="@+id/ib_hard_route"
+        style="@style/btn_modal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Green"
+        android:backgroundTintMode="src_atop"
+        android:src="@drawable/ic_hard_route"
+        app:layout_constraintEnd_toEndOf="@id/tv_hard_route"
+        app:layout_constraintStart_toStartOf="@id/tv_hard_route"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageButton>
+
+
+    <ImageButton
+        android:id="@+id/ib_wherever"
+        style="@style/btn_modal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/DarkBlue"
+        android:backgroundTintMode="src_over"
+        android:src="@drawable/ic_wherever"
+        app:layout_constraintEnd_toEndOf="@id/tv_wherever"
+        app:layout_constraintStart_toStartOf="@id/tv_wherever"
+        app:layout_constraintTop_toTopOf="@id/ib_hard_route">
+
+    </ImageButton>
+
+
+    <ImageButton
+        android:id="@+id/ib_holidays"
+        style="@style/btn_modal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Blue"
+        android:src="@drawable/ic_holidays"
+        app:layout_constraintEnd_toEndOf="@id/tv_holidays"
+        app:layout_constraintStart_toStartOf="@id/tv_holidays"
+        app:layout_constraintTop_toTopOf="@id/ib_wherever">
+
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/ib_hot_tickets"
+        style="@style/btn_modal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Red"
+        android:src="@drawable/ic_hot_tickets"
+        app:layout_constraintEnd_toEndOf="@id/tv_hot_tickets"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_tickets"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/tv_hard_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hard_route_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.text2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_wherever"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ib_hard_route">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/tv_wherever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wherever_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.text2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_holidays"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_hard_route"
+        app:layout_constraintTop_toTopOf="@id/tv_hard_route">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/tv_holidays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/holidays_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.text2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_hot_tickets"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_wherever"
+        app:layout_constraintTop_toTopOf="@id/tv_wherever">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_hot_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hot_tickets_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.text2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_holidays"
+        app:layout_constraintTop_toTopOf="@id/tv_holidays">
+
+    </TextView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardBackgroundColor="@color/Grey4"
+        app:layout_constraintTop_toBottomOf="@id/tv_hard_route">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_to_dests_suggestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

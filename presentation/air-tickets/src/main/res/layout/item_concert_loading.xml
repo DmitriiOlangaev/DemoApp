@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/concert_item_spacing">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sfl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <View
+            android:id="@+id/v_image"
+            android:layout_width="@dimen/concert_image_size"
+            android:layout_height="@dimen/concert_image_size"
+            android:background="@drawable/shape_loading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </View>
+
+        <View
+            android:id="@+id/v_group_name"
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:background="@drawable/shape_loading"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/v_image"
+            app:layout_constraintEnd_toEndOf="@id/v_image"
+            app:layout_constraintTop_toBottomOf="@id/v_image">
+
+        </View>
+
+        <View
+            android:id="@+id/v_town"
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:background="@drawable/shape_loading"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/v_group_name"
+            app:layout_constraintStart_toStartOf="@id/v_group_name"
+            app:layout_constraintTop_toBottomOf="@id/v_group_name">
+
+        </View>
+
+        <View
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_loading"
+            app:layout_constraintEnd_toEndOf="@id/v_town"
+            app:layout_constraintStart_toStartOf="@id/v_town"
+            app:layout_constraintTop_toBottomOf="@id/v_town">
+
+        </View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

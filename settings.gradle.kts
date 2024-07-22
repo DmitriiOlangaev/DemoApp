@@ -15,14 +15,14 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "DemoApp"
-include(":app-view")
 include(":core:common-android")
-include(":core:datasources")
-include(":core:model")
-include(":core:repositories")
 include(":core:common")
-include(":feature:air-tickets")
-include(":feature:mock")
-include(":core:datastore-proto")
 include(":core:designsystem")
-include(":core:network")
+include(":app-view")
+include(":presentation:air-tickets")
+include(":presentation:mock")
+include(":domain")
+include(":data:repositories")
+include(":data:network")
+include(":data:model")
+include(":data:datastore")

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
+      <module name="DemoApp.core.datastore-proto" target="17" />
+      <module name="DemoApp.core.network" target="17" />
+      <module name="DemoApp.core.repositories" target="17" />
+      <module name="DemoApp.data.datastore-proto" target="17" />
+      <module name="DemoApp.feature.air-tickets" target="17" />
       <module name="DemoApp.feature.hotels" target="17" />
+      <module name="DemoApp.feature.mock" target="17" />
       <module name="DemoApp.feature.profile" target="17" />
       <module name="DemoApp.feature.shortly" target="17" />
       <module name="DemoApp.feature.subscriptions" target="17" />

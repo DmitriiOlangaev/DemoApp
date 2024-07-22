@@ -3,56 +3,56 @@
     <style name="TextAppearance.AppCompat.title1">
         <item name="android:fontFamily">@font/semibold</item>
         <item name="android:textFontWeight">600</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">22dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
 
     <style name="TextAppearance.AppCompat.title2">
         <item name="android:fontFamily">@font/semibold</item>
         <item name="android:textFontWeight">600</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
 
     <style name="TextAppearance.AppCompat.title3">
         <item name="android:fontFamily">@font/semibold</item>
         <item name="android:textFontWeight">600</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
 
     <style name="TextAppearance.AppCompat.title4">
         <item name="android:fontFamily">@font/medium</item>
         <item name="android:textFontWeight">600</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
 
     <style name="TextAppearance.AppCompat.text1">
         <item name="android:fontFamily">@font/regular</item>
         <item name="android:textFontWeight">400</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
     
     <style name="TextAppearance.AppCompat.text2">
         <item name="android:fontFamily">@font/regular</item>
         <item name="android:textFontWeight">400</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
     
     <style name="TextAppearance.AppCompat.button1">
         <item name="android:fontFamily">@font/semibold</item>
         <item name="android:textFontWeight">600</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
 
     <style name="TextAppearance.AppCompat.tab">
         <item name="android:fontFamily">@font/regular</item>
         <item name="android:textFontWeight">400</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">10dp</item>
         <item name="android:textColor">@color/White</item>
     </style>
 </resources>

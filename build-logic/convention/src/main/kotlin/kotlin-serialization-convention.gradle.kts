@@ -5,7 +5,8 @@ plugins {
 
 dependencies {
     val implementation by configurations
-    implementation(libs.kotlinx.serialization.json)
+    val api by configurations
+    api(libs.kotlinx.serialization.json)
 }
 
 val org.gradle.api.Project.`libs`: org.gradle.accessors.dm.LibrariesForLibs
