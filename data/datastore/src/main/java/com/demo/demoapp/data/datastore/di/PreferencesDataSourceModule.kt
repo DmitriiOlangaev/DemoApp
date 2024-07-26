@@ -6,7 +6,6 @@ import androidx.datastore.core.DataStoreFactory
 import androidx.datastore.dataStoreFile
 import com.demo.demoapp.core.common.di.AppDispatcher
 import com.demo.demoapp.core.common.di.ApplicationCoroutineScope
-import com.demo.demoapp.core.common.di.ApplicationScope
 import com.demo.demoapp.core.common.di.Dispatcher
 import com.demo.demoapp.data.datastore.PreferencesDataSource
 import com.demo.demoapp.data.datastore.PreferencesDataStore
@@ -15,14 +14,18 @@ import com.demo.demoapp.data.datastore.UserPreferencesSerializer
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
+import javax.inject.Singleton
 
 @Module
+@InstallIn(SingletonComponent::class)
 abstract class PreferencesDataSourceModule {
     companion object {
         @Provides
-        @ApplicationScope
+        @Singleton
         internal fun preferencesDataStore(
             application: Application,
             @Dispatcher(AppDispatcher.IO) ioDispatcher: CoroutineDispatcher,

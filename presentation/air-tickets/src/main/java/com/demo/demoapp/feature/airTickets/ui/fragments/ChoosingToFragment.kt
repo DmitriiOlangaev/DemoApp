@@ -15,6 +15,7 @@ import com.demo.demoapp.core.common.Result
 import com.demo.demoapp.core.common.findDependencies
 import com.demo.demoapp.core.common.lazyViewModel
 import com.demo.demoapp.core.common.setCollector
+import com.demo.demoapp.domain.model.DestinationSuggestion
 import com.demo.demoapp.feature.airTickets.databinding.FragmentChoosingToBinding
 import com.demo.demoapp.feature.airTickets.di.ChoosingToFragmentComponent
 import com.demo.demoapp.feature.airTickets.di.DaggerChoosingToFragmentComponent
@@ -88,10 +89,12 @@ internal class ChoosingToFragment : Fragment() {
             viewModel.toDestinationsStateFlow.collect {
                 when(it) {
                     is Result.Success -> {
-                        adapter.items = it.data.map { ToDestinationUiState.Success(it) }
+                        adapter.items = it.data.map<DestinationSuggestion, ToDestinationUiState> {
+                            destinationSuggestion -> ToDestinationUiState.Success(destinationSuggestion)
+                        }
                     }
                     is Result.Loading -> {
-                        adapter.items = Collections.nCopies(7, ToDestinationUiState.Loading).toList()
+                        adapter.items = Collections.nCopies<ToDestinationUiState>(5, ToDestinationUiState.Loading).toList()
                     }
                     is Result.Error -> {
                         Log.e("ErrorToDestinationsSuggestions", it.exception.stackTraceToString())

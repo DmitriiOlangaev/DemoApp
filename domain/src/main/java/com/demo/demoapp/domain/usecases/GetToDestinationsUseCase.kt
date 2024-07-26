@@ -14,7 +14,12 @@ class GetToDestinationsUseCase @Inject constructor(
 ) {
     operator fun invoke(): Flow<List<DestinationSuggestion>> =
         combine(getToFlow(), getSuggestionsFlow()) { toList, suggestionsList ->
-            toList + suggestionsList
+
+            toList.toMutableList().apply {
+                removeAll { toDest ->
+                    suggestionsList.any { destinationSuggestion ->  destinationSuggestion.town == toDest.town}
+                }
+            } + suggestionsList
         }
 
     private fun getToFlow(): Flow<List<DestinationSuggestion>> =

@@ -57,8 +57,12 @@ internal class ChoosingDestsBottomSheet : BottomSheetDialogFragment(), HasDepend
     private val viewModel: ChoosingDestsFragmentViewModel by lazyViewModel { stateHandle ->
         component.viewModelFactory().create(stateHandle)
     }
+    private val imm
+        get() = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
     private var ignoreDestEtEdited: Boolean = false
+
+    private var focusState: FocusState = FocusState.NONE
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -85,9 +89,35 @@ internal class ChoosingDestsBottomSheet : BottomSheetDialogFragment(), HasDepend
     }
 
 
+    override fun onPause() {
+        super.onPause()
+        saveFocusState()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        restoreFocusState()
+    }
+
     override fun onDestroyView() {
         _binding = null
         super.onDestroyView()
+    }
+
+    private fun saveFocusState() {
+        focusState =
+            if (binding.etFrom.isFocused) FocusState.FROM
+            else if (binding.etTo.isFocused) FocusState.TO
+            else FocusState.NONE
+    }
+
+    private fun restoreFocusState() {
+        when(focusState) {
+            FocusState.NONE -> return
+            FocusState.FROM -> binding.etFrom.requestFocus()
+            FocusState.TO -> binding.etTo.requestFocus()
+
+        }
     }
 
     private fun initializeComponent(): ChoosingDestsFragmentComponent =
@@ -115,7 +145,7 @@ internal class ChoosingDestsBottomSheet : BottomSheetDialogFragment(), HasDepend
         setClearTextButton(et, btn)
     }
 
-    private fun EditText.setTextOnDest(text : String) {
+    private fun EditText.setTextOnDest(text: String) {
         ignoreDestEtEdited = true
         setText(text)
         selectAll()
@@ -166,6 +196,7 @@ internal class ChoosingDestsBottomSheet : BottomSheetDialogFragment(), HasDepend
             if (ignoreDestEtEdited || text == null) return@doOnTextChanged
             enterTownViewModel.enteredTown.value = text.toString()
             if (text.isEmpty()) {
+                if (navHostFragment.navController.currentDestination?.id == destID) return@doOnTextChanged
                 navHostFragment.navController.navigate(destID)
             } else if (navHostFragment.navController.currentDestination?.id != R.id.choosingTownFragment) {
                 navHostFragment.navController.navigate(R.id.choosingTownFragment)
@@ -195,9 +226,7 @@ internal class ChoosingDestsBottomSheet : BottomSheetDialogFragment(), HasDepend
 
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 if (slideOffset > 0) {
-                    val inputMethodManager =
-                        requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    inputMethodManager.hideSoftInputFromWindow(bottomSheet.windowToken, 0)
+                    imm.hideSoftInputFromWindow(bottomSheet.windowToken, 0)
                 }
             }
 
@@ -231,5 +260,9 @@ internal class ChoosingDestsBottomSheet : BottomSheetDialogFragment(), HasDepend
                 R.drawable.ic_search
             ), null, null, null
         )
+    }
+
+    private enum class FocusState {
+        FROM, TO, NONE
     }
 }

@@ -1,6 +1,7 @@
 plugins {
     id("android-library-convention")
     id("dagger-convention")
+    id("hilt-convention")
 }
 
 

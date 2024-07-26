@@ -3,6 +3,7 @@ import com.google.protobuf.gradle.GenerateProtoTask
 plugins {
     id("android-library-convention")
     id("dagger-convention")
+    id("hilt-convention")
     alias(libs.plugins.protobuf)
 }
 
