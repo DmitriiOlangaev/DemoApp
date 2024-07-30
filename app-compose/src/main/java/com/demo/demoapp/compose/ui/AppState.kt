@@ -3,8 +3,6 @@ package com.demo.demoapp.compose.ui
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -14,14 +12,12 @@ import androidx.navigation.navOptions
 import com.demo.demoapp.compose.navigation.TopLevelDestination
 import com.demo.demoapp.presentation.air.tickets.compose.navigation.AIR_TICKETS_ROUTE
 import com.demo.demoapp.presentation.air.tickets.compose.navigation.navigateToAirTickets
-import com.demo.demoapp.presentation.mock.compose.navigation.MOCK_ROUTE
 import com.demo.demoapp.presentation.mock.compose.navigation.navigateToMock
-import kotlinx.coroutines.CoroutineScope
 
 @Composable
 fun rememberAppState(
     navController: NavHostController = rememberNavController(),
-) : AppState = remember(navController) {
+): AppState = remember(navController) {
     AppState(navController = navController)
 }
 
@@ -29,14 +25,14 @@ fun rememberAppState(
 class AppState(
     val navController: NavHostController,
 ) {
-    val currentDestination : NavDestination?
+    val currentDestination: NavDestination?
         @Composable get() = navController.currentBackStackEntryAsState().value?.destination
-    val currentTopLevelDestination : TopLevelDestination?
-        @Composable get() = when(currentDestination?.route) {
+    val currentTopLevelDestination: TopLevelDestination?
+        @Composable get() = when (currentDestination?.route) {
             AIR_TICKETS_ROUTE -> TopLevelDestination.AIR_TICKETS
             else -> null
         }
-    val topLevelDestinations : List<TopLevelDestination> = TopLevelDestination.entries
+    val topLevelDestinations: List<TopLevelDestination> = TopLevelDestination.entries
 
     fun navigateToTopLevelDestination(topLevelDestination: TopLevelDestination) {
         val topLevelNavOptions = navOptions {
@@ -46,7 +42,7 @@ class AppState(
             launchSingleTop = true
             restoreState = true
         }
-        when(topLevelDestination) {
+        when (topLevelDestination) {
             TopLevelDestination.AIR_TICKETS -> navController.navigateToAirTickets(topLevelNavOptions)
             TopLevelDestination.HOTELS -> navController.navigateToMock(topLevelNavOptions)
             TopLevelDestination.SHORTLY -> navController.navigateToMock(topLevelNavOptions)

@@ -9,14 +9,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.demo.demoapp.core.common.Result
 import com.demo.demoapp.core.common.findDependencies
 import com.demo.demoapp.core.common.lazyViewModel
 import com.demo.demoapp.core.common.setCollector
-import com.demo.demoapp.core.common.setVisible
 import com.demo.demoapp.core.common.setVisibleOrGone
 import com.demo.demoapp.feature.airTickets.databinding.FragmentChoosingTownBinding
 import com.demo.demoapp.feature.airTickets.di.ChoosingTownFragmentComponent
@@ -27,12 +25,7 @@ import com.demo.demoapp.feature.airTickets.viewModels.EnteredTownSharedViewModel
 import com.demo.demoapp.feature.airTickets.viewModels.TownClickedSharedViewModel
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 import kotlinx.coroutines.CompletableDeferred
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
 import java.util.Collections
-import java.util.concurrent.CountDownLatch
 import javax.inject.Inject
 
 internal class ChoosingTownFragment : Fragment() {

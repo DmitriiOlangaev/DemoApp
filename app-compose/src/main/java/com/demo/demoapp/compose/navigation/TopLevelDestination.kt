@@ -1,7 +1,5 @@
 package com.demo.demoapp.compose.navigation
 
-import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.res.painterResource
 import com.demo.demoapp.compose.R
 
 enum class TopLevelDestination(

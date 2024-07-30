@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
+import kotlin.math.min
 
 class GetToDestinationsUseCase @Inject constructor(
     private val preferencesDataSource: PreferencesDataSource,
@@ -17,7 +18,7 @@ class GetToDestinationsUseCase @Inject constructor(
 
             toList.toMutableList().apply {
                 removeAll { toDest ->
-                    suggestionsList.any { destinationSuggestion ->  destinationSuggestion.town == toDest.town}
+                    suggestionsList.any { destinationSuggestion -> destinationSuggestion.town == toDest.town }
                 }
             } + suggestionsList
         }
@@ -28,6 +29,7 @@ class GetToDestinationsUseCase @Inject constructor(
 
     private fun getSuggestionsFlow(): Flow<List<DestinationSuggestion>> = townsRepository.getTowns()
         .map { list ->
-            list.subList(0, 10).map { DestinationSuggestion(it, "Популярное направление") }
+            list.subList(0, min(list.size, 10))
+                .map { DestinationSuggestion(it, "Популярное направление") }
         }
 }

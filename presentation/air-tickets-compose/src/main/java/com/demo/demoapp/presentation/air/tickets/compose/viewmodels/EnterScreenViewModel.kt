@@ -8,11 +8,7 @@ import com.demo.demoapp.core.common.asResult
 import com.demo.demoapp.domain.model.Concert
 import com.demo.demoapp.domain.usecases.GetConcertsUseCase
 import com.demo.demoapp.domain.usecases.GetPreviouslyEnteredFromUseCase
-import dagger.assisted.Assisted
-import dagger.assisted.AssistedFactory
-import dagger.assisted.AssistedInject
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
@@ -26,7 +22,7 @@ internal class EnterScreenViewModel @Inject constructor(
     getPreviouslyEnteredFromUseCase: GetPreviouslyEnteredFromUseCase
 ) : ViewModel() {
     val fromStateFlow: StateFlow<Result<String>> =
-        getPreviouslyEnteredFromUseCase().map { it.last() }.asResult()
+        getPreviouslyEnteredFromUseCase().map { it.lastOrNull() ?: "" }.asResult()
             .stateIn(viewModelScope, SharingStarted.Lazily, Result.Loading)
     var concertsStateFlow: StateFlow<Result<List<Concert>>> = concertsStateFlow()
         private set

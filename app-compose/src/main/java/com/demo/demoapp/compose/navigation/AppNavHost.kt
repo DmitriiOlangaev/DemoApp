@@ -10,12 +10,16 @@ import com.demo.demoapp.presentation.mock.compose.navigation.mockScreen
 
 @Composable
 fun AppNavHost(
-    appState : AppState,
+    appState: AppState,
     modifier: Modifier = Modifier,
-    startDestination : String = AIR_TICKETS_ROUTE
+    startDestination: String = AIR_TICKETS_ROUTE
 ) {
     val navController = appState.navController
-    NavHost(navController = navController, startDestination = startDestination, modifier = modifier) {
+    NavHost(
+        navController = navController,
+        startDestination = startDestination,
+        modifier = modifier
+    ) {
         airTicketsScreen()
         mockScreen()
     }

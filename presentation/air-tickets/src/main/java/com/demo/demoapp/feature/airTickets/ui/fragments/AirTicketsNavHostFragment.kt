@@ -1,10 +1,7 @@
 package com.demo.demoapp.feature.airTickets.ui.fragments
 
 import android.content.Context
-import android.os.Bundle
-import android.view.View
 import androidx.navigation.NavHostController
-import androidx.navigation.createGraph
 import androidx.navigation.fragment.NavHostFragment
 import com.demo.demoapp.core.common.DepsMap
 import com.demo.demoapp.core.common.HasDependencies

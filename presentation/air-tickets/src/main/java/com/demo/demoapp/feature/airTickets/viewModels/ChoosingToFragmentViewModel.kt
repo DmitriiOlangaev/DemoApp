@@ -11,7 +11,6 @@ import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
-import javax.inject.Inject
 
 internal class ChoosingToFragmentViewModel @AssistedInject constructor(@Assisted stateHandle: SavedStateHandle,private val getToDestinationsUseCase : GetToDestinationsUseCase) : ViewModel(){
     val toDestinationsStateFlow = getToDestinationsUseCase().asResult().stateIn(viewModelScope, SharingStarted.Lazily, Result.Loading)

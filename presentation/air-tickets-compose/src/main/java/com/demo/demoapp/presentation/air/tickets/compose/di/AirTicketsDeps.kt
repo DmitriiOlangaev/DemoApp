@@ -4,9 +4,9 @@ import android.app.Application
 import android.content.Context
 import coil.ImageLoader
 import com.demo.demoapp.core.common.Dependencies
-import com.demo.demoapp.domain.usecases.GetConcertsUseCase
 import com.demo.demoapp.domain.usecases.EnterFromUseCase
 import com.demo.demoapp.domain.usecases.EnterToUseCase
+import com.demo.demoapp.domain.usecases.GetConcertsUseCase
 import com.demo.demoapp.domain.usecases.GetPreviouslyEnteredFromUseCase
 import com.demo.demoapp.domain.usecases.GetToDestinationsUseCase
 import com.demo.demoapp.domain.usecases.GetTownsUseCase

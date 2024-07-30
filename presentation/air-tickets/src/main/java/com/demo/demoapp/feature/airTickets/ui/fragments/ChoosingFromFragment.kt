@@ -15,11 +15,9 @@ import com.demo.demoapp.core.common.Result
 import com.demo.demoapp.core.common.findDependencies
 import com.demo.demoapp.core.common.lazyViewModel
 import com.demo.demoapp.core.common.setCollector
-import com.demo.demoapp.domain.model.DestinationSuggestion
 import com.demo.demoapp.feature.airTickets.databinding.FragmentChoosingFromBinding
 import com.demo.demoapp.feature.airTickets.di.ChoosingFromFragmentComponent
 import com.demo.demoapp.feature.airTickets.di.DaggerChoosingFromFragmentComponent
-import com.demo.demoapp.feature.airTickets.ui.recyclerView.AssistedInjectAdapter
 import com.demo.demoapp.feature.airTickets.ui.recyclerView.TownUiState
 import com.demo.demoapp.feature.airTickets.viewModels.ChoosingFromFragmentViewModel
 import com.demo.demoapp.feature.airTickets.viewModels.TownClickedSharedViewModel

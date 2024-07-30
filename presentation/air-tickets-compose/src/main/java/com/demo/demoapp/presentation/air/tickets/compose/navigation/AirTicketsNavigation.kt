@@ -1,11 +1,9 @@
 package com.demo.demoapp.presentation.air.tickets.compose.navigation
 
-import androidx.compose.runtime.compositionLocalOf
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.demo.demoapp.presentation.air.tickets.compose.di.AirTicketsDepsSealed
 import com.demo.demoapp.presentation.air.tickets.compose.ui.AirTicketsRoute
 
 const val AIR_TICKETS_ROUTE = "air_tickets"

@@ -3,7 +3,6 @@ package com.demo.demoapp.feature.airTickets.di
 import com.demo.demoapp.core.common.Dependencies
 import com.demo.demoapp.domain.usecases.EnterFromUseCase
 import com.demo.demoapp.domain.usecases.EnterToUseCase
-import com.demo.demoapp.domain.usecases.GetPreviouslyEnteredFromUseCase
 
 internal interface ChoosingDestsFragmentDeps : ChoosingTownFragmentDeps, ChoosingFromFragmentDeps, ChoosingToFragmentDeps, Dependencies{
     val enterFromUseCase : EnterFromUseCase

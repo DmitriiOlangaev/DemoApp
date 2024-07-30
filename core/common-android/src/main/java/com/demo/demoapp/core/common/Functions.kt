@@ -76,8 +76,11 @@ fun View.setVisibleOrGone(visible: Boolean) {
     this.visibility = if (visible) View.VISIBLE else View.GONE
 }
 
-fun Fragment.setCollector(f: suspend CoroutineScope.() -> Unit) {
+fun Fragment.setCollector(
+    state: Lifecycle.State = Lifecycle.State.STARTED,
+    f: suspend CoroutineScope.() -> Unit
+) {
     viewLifecycleOwner.lifecycleScope.launch {
-        viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED, f)
+        viewLifecycleOwner.repeatOnLifecycle(state, f)
     }
 }
